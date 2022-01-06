@@ -16,6 +16,7 @@ import java.util.List;
 public class AnimeClient {
 
     public  Anime getAnimeByIdClient(long id) {
+        //Busca um anime pelo ID
 
     /*
         Tentar requisitar os dados da API diretamente para o objeto Anime gera um erro Htpp 406,
@@ -38,10 +39,23 @@ public class AnimeClient {
 
 
     public List<Anime> getAnimeByFilterClient(String attribute, String value) {
+        //Busca um anime usando qualquer filtro disponibilizado pela API
 
         String animeStr = new RestTemplate()
-                .getForObject("https://kitsu.io/api/edge/anime?filter[{attribute}]={value}",
-                String.class, attribute, value);
+                 .getForObject("https://kitsu.io/api/edge/anime?filter[{attribute}]={value}",
+                 String.class, attribute, value);
+
+        JSONObject animeJson = new JSONObject(animeStr);
+
+        return CreateAnime.createAnimesWithJson(animeJson);
+    }
+
+    public List<Anime> getTrendingAnimes() {
+        //Retorna os animes mais famosos
+
+        String animeStr = new RestTemplate()
+                         .getForObject("https://kitsu.io/api/edge/trending/anime",
+                         String.class);
 
         JSONObject animeJson = new JSONObject(animeStr);
 

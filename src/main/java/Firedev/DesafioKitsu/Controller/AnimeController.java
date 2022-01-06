@@ -25,4 +25,9 @@ public class AnimeController {
     public List<Anime> getAnimeByFilter(@RequestParam String attribute, String value){
         return animeClient.getAnimeByFilterClient(attribute, value);
     }
+
+    @GetMapping("/trending")
+    public List<Anime> getTrendingAnimes(){
+        return animeClient.getTrendingAnimes();
+    }
 }
