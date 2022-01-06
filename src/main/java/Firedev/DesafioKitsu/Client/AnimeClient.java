@@ -8,6 +8,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.json.*;
+
+import java.util.List;
+
 @Service
 @Log4j2
 public class AnimeClient {
@@ -29,8 +32,19 @@ public class AnimeClient {
                       String.class, id);
 
     JSONObject animeJson = new JSONObject(animeStr);
-    animeJson = (JSONObject) animeJson.get("data");
 
     return CreateAnime.createAnimeWithJson(animeJson);
+    }
+
+
+    public List<Anime> getAnimeByFilterClient(String attribute, String value) {
+
+        String animeStr = new RestTemplate()
+                .getForObject("https://kitsu.io/api/edge/anime?filter[{attribute}]={value}",
+                String.class, attribute, value);
+
+        JSONObject animeJson = new JSONObject(animeStr);
+
+        return CreateAnime.createAnimesWithJson(animeJson);
     }
 }

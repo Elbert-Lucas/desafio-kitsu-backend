@@ -4,11 +4,10 @@ import Firedev.DesafioKitsu.Client.AnimeClient;
 import Firedev.DesafioKitsu.Domain.Anime;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j2;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;
+
+import java.util.List;
 
 @Log4j2
 @RestController
@@ -21,5 +20,9 @@ public class AnimeController {
     @GetMapping(path = "/{id}")
     public Anime getAnimeById(@PathVariable long id){
         return animeClient.getAnimeByIdClient(id);
+    }
+    @GetMapping()
+    public List<Anime> getAnimeByFilter(@RequestParam String attribute, String value){
+        return animeClient.getAnimeByFilterClient(attribute, value);
     }
 }
