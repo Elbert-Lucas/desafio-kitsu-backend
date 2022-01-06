@@ -18,12 +18,15 @@ public class CreateAnime {
         JSONObject data = animeJson.getJSONObject("data");
         JSONObject attributes = data.getJSONObject("attributes");
         JSONObject relationships = data.getJSONObject("relationships");
+        JSONObject posterImage = attributes.getJSONObject("posterImage");
 
         return Anime.builder()
                 .id(data.getString("id"))
                 .type(data.getString("type"))
                 .slug(attributes.getString("slug"))
                 .description(attributes.getString("description"))
+                .episodeCount(String.valueOf(attributes.get("episodeCount")))
+                .poster(posterImage.getString("medium"))
                 .build();
     }
 
@@ -34,6 +37,7 @@ public class CreateAnime {
         JSONArray datas = animeJson.getJSONArray("data");
         JSONObject attributes;
         JSONObject relationships;
+        JSONObject posterImage;
 
         List<Anime> animes = new ArrayList<>();
 
@@ -42,12 +46,15 @@ public class CreateAnime {
             JSONObject data = (JSONObject) datas.get(p);
             attributes = data.getJSONObject("attributes");
             relationships =  data.getJSONObject("relationships");
+            posterImage = attributes.getJSONObject("posterImage");
 
             animes.add(Anime.builder()
                     .id(data.getString("id"))
                     .type(data.getString("type"))
                     .slug(attributes.getString("slug"))
                     .description(attributes.getString("description"))
+                    .episodeCount(String.valueOf(attributes.get("episodeCount")))
+                    .poster(posterImage.getString("medium"))
                     .build());
         }
 
