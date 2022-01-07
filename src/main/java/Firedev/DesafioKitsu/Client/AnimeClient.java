@@ -23,7 +23,7 @@ public class AnimeClient {
         E isso também dificultaria o crescimento do software.
 
         Decidi entao tratar este erro transformando o JSON em uma string e tratando-o com a biblioteca org.JSON.
-        Caso isso prejudique a perfomance eu irei reverter e usar a orientação a objetos.
+
      */
 
     String animeStr = new RestTemplate().getForObject("https://kitsu.io/api/edge/anime/{id}",
