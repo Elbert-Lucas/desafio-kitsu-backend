@@ -2,12 +2,14 @@
 
 # Tecnologias utilizadas:
 
-## Java 11
-## Spring Frameword
-## Kitsu Api
-# Html e Css
 
-# API busca de animes
+### Java 11
+### Spring Frameword
+### Kitsu Api
+### Html e Css
+
+
+# Busca de animes
 
 ### Por meio desta aplicação é possivel fazer buscas de Animes, Mangas, Capitulos e Mangas por requisiçoes Http.
 ### A aplicação criada no desafio faz uso da Kitsu API para buscar todos estes elementos. É possivel fazer requisições simples por busca pelo ID, mas também é possivel fazer pesquisas mais complexas, como nome, popularidade, sinopse.
