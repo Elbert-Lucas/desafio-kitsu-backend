@@ -1,16 +1,19 @@
 package Firedev.DesafioKitsu.Domain;
-import lombok.Builder;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 
 @Data
-@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@SuperBuilder
 public class Manga{
-    protected String id;
-    protected String slug;
-    protected String type;
-    protected String description;
+    private String id;
+    private String slug;
+    private String type;
+    private String description;
+    private String poster;
     private String chapterCount;
     private String volumeCount; // o n° de capitulos e volumes é uma string para não gerar exceçoes com valor null
-    protected String poster;
-
 }

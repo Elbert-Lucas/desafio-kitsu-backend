@@ -1,6 +1,7 @@
 package Firedev.DesafioKitsu.Util;
 
 import Firedev.DesafioKitsu.Domain.Manga;
+import lombok.extern.log4j.Log4j2;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.stereotype.Service;

@@ -46,7 +46,18 @@ public class RestExceptionHandler {
                         .status(HttpStatus.BAD_REQUEST.value())
                         .title("No results")
                         .details(clientError.getMessage())
-                        .developerMessage("Que pena, parece que o anime/manga que voce procurou não está disponivel")
+                        .developerMessage("Que pena, parece que o conteúdo que voce procurou não está disponivel")
+                        .build(), HttpStatus.BAD_REQUEST);
+    }
+    @ExceptionHandler(NullPointerException.class)
+    public ResponseEntity<ExceptionDetails> handlerNullPointerException(NullPointerException nullPointer){
+        return new ResponseEntity<>(
+                ExceptionDetails.builder()
+                        .timestamp(LocalDateTime.now())
+                        .status(HttpStatus.BAD_REQUEST.value())
+                        .title("Valores nulos")
+                        .details(nullPointer.getMessage())
+                        .developerMessage("Confira a url, você pode ter esquecido algum atributo ou passado um errado.")
                         .build(), HttpStatus.BAD_REQUEST);
     }
 }

@@ -18,6 +18,7 @@ public class AnimeController {
     public Anime getAnimeById(@PathVariable Long id){
         return animeService.getAnimeByIdService(id);
     }
+
     @GetMapping()
     public List<Anime> getAnimeByFilter(@RequestParam String attribute, String value){
         return animeService.getAnimeByFilterService(attribute, value);

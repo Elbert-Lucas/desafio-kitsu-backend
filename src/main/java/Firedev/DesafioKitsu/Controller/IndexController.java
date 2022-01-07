@@ -13,6 +13,7 @@ import javax.websocket.server.PathParam;
 @RestController
 public class IndexController {
 
+    //FRONT END
     private final AnimeService animeService;
 
     @GetMapping("/")

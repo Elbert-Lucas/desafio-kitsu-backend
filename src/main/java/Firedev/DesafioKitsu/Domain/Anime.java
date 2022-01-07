@@ -1,12 +1,16 @@
 package Firedev.DesafioKitsu.Domain;
 
-import lombok.Builder;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 
 
 @Data
-@Builder
-public class Anime {
+@AllArgsConstructor
+@NoArgsConstructor
+@SuperBuilder
+public class Anime{
 
     /*
         A API fornece milhares de informaçoes, acho que é um despedicio nao incluir todas,
