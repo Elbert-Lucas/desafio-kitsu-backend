@@ -15,9 +15,9 @@ Vamos ao teste!
 Realizar consultas na API [https://kitsu.docs.apiary.io](https://kitsu.docs.apiary.io)
 
 Construir os seguintes endpoints:
- ~~ Retorno dos animes mais populares ~~~
- ~~ Retorno dos mangas mais populares ~~
- ~~ Buscar anime ou manga com filtros (título, ano, etc) ~~
+ ~~Retorno dos animes mais populares ~~~
+ ~~Retorno dos mangas mais populares ~~
+ ~~Buscar anime ou manga com filtros (título, ano, etc) ~~
  - Obter informações de um anime ou manga;
  - Obter informações de um episodio de um anime especifico;
 
