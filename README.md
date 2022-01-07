@@ -1,62 +1,41 @@
 # Desafio Kitsu - Firedev IT
 
-Olá Dev! Tudo bem?
+# Tecnologias utilizadas:
 
-Nós estamos sempre em busca de profissionais interessantes e interessados, com boa capacidade de aprendizado, adaptação e principalmente bom senso!
+## Java 11
+## Spring Frameword
+## Kitsu Api
+# Html e Css
 
-Este teste tem como objetivo avaliar e desafiar você. Não é obrigatório realizá-lo completamente, queremos apenas reconhecer seu esforço e potencial para aprender, se adaptar e tomar decisões.
+# API busca de animes
 
-Vamos usar esse teste para validar a sua lógica, design da sua solução, código legível, estruturação do código, entre outros fatores.
+### Por meio desta aplicação é possivel fazer buscas de Animes, Mangas, Capitulos e Mangas por requisiçoes Http.
+### A aplicação criada no desafio faz uso da Kitsu API para buscar todos estes elementos. É possivel fazer requisições simples por busca pelo ID, mas também é possivel fazer pesquisas mais complexas, como nome, popularidade, sinopse.
 
-Vamos ao teste!
+### Documentação : http://localhost:8080/swagger-ui.html
 
-## Desafio
+# Telas:
 
-Realizar consultas na API [https://kitsu.docs.apiary.io](https://kitsu.docs.apiary.io)
+### Get By ID - success
+[getIDSuccess](https://user-images.githubusercontent.com/63523828/148614496-39e1978e-c283-4116-b2bc-ec0ccb1194b5.PNG)
 
-Construir os seguintes endpoints:
- ~~Retorno dos animes mais populares ~~~
- 
- ~~Retorno dos mangas mais populares ~~
- 
- ~~Buscar anime ou manga com filtros (título, ano, etc) ~~
- 
- - Obter informações de um anime ou manga;
- - Obter informações de um episodio de um anime especifico;
 
-## Regras
+### Get By Name - success
+![getBySlugSucess](https://user-images.githubusercontent.com/63523828/148614537-617778d2-5117-48b0-9bbe-34482cfb14f2.PNG)
 
- 1. Linguagens JAVA ou PHP.
- 2. Poderá ser feito utilizando qualquer framework.
- 3. O código deve ser orientado a objeto.
- 4. Deve ser versionado usando o git e disponibilizado no GitHub ou Bitbucket.
- 5. Descrever no README do projeto as especificações, tecnologias e demais informações do projeto.
 
-## Plus
+### Get By Text - success
+![getByTextSucess](https://user-images.githubusercontent.com/63523828/148614582-6f21da41-af45-4c74-9ae6-246ecb95672e.PNG)
 
- 1. Deploy no Heroku.
- 2. Criar estrutura no banco para salvar as buscas do usuário.
- 3. Criar um relatório de itens mais pesquisados com base na estrutura criada.
 
-## O que apreciamos?
+### Get trending  - success
+![animeTrending](https://user-images.githubusercontent.com/63523828/148614653-eeaec808-8bae-4857-b322-393c3e64e467.PNG)
 
- - Organização;
- - Simplicidade;
- - Objetividade;
- - Reúso de código;
- - Testes unitários e ou de integração;
- - Padronização de código;
- - Padrões de projeto;
- - Documentação de código e endpoints.
 
-## Quem buscamos?
+### Get By ID - Fail
+![getMangaIDSucess](https://user-images.githubusercontent.com/63523828/148614740-1ef87286-7b82-47d8-bcaf-b1e2c2eaccf4.PNG)
 
-Queremos uma pessoa que goste do que faz, trabalhe em equipe e tenha vontade de inovar, buscando sempre atualização e soluções inovadoras.
 
-Se você se identificou, venha fazer parte do nosso time!
+### Get By Attributes - Fail
+![mangaAttrsFail](https://user-images.githubusercontent.com/63523828/148614798-ab38ccbd-79a6-41f9-a4cd-e06f06f6fbfe.PNG)
 
-## 
-
-Qualquer duvida pode entrar em contato com o recrutador.
-
-_Não precisa desenvolver uma interface gráfica, porem é um diferencial._
