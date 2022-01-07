@@ -1,8 +1,6 @@
 package Firedev.DesafioKitsu.Util;
 
 import Firedev.DesafioKitsu.Domain.Anime;
-import Firedev.DesafioKitsu.Domain.Manga;
-import lombok.extern.log4j.Log4j2;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.stereotype.Service;
@@ -10,7 +8,6 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
-@Log4j2
 
 @Service
 public class CreateAnime{
@@ -23,6 +20,7 @@ public class CreateAnime{
         JSONObject posterImage = attributes.getJSONObject("posterImage");
 
         return Anime.builder()
+                .id(data.getString("id"))
                 .type(data.getString("type"))
                 .slug(attributes.getString("slug"))
                 .description(attributes.getString("description"))

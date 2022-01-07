@@ -1,6 +1,5 @@
 package Firedev.DesafioKitsu.Util;
 
-import Firedev.DesafioKitsu.Domain.Anime;
 import Firedev.DesafioKitsu.Domain.Manga;
 import org.json.JSONArray;
 import org.json.JSONObject;

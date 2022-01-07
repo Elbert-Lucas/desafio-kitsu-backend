@@ -2,7 +2,6 @@ package Firedev.DesafioKitsu.Client;
 
 import Firedev.DesafioKitsu.Domain.Anime;
 import Firedev.DesafioKitsu.Util.CreateAnime;
-import lombok.extern.log4j.Log4j2;
 
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -11,10 +10,9 @@ import org.json.*;
 import java.util.List;
 
 @Service
-@Log4j2
 public class AnimeClient {
 
-    public  Anime getAnimeByIdClient(long id) {
+    public Anime getAnimeByIdClient(Long id) throws RuntimeException {
         //Busca um anime pelo ID
 
     /*
@@ -49,7 +47,7 @@ public class AnimeClient {
         return CreateAnime.createAnimesWithJson(animeJson);
     }
 
-    public List<Anime> getTrendingAnimes() {
+    public List<Anime> getTrendingAnimesClient() {
         //Retorna os animes mais famosos
 
         String animeStr = new RestTemplate()

@@ -1,8 +1,6 @@
 package Firedev.DesafioKitsu.Client;
 
-import Firedev.DesafioKitsu.Domain.Anime;
 import Firedev.DesafioKitsu.Domain.Manga;
-import Firedev.DesafioKitsu.Util.CreateAnime;
 import Firedev.DesafioKitsu.Util.CreateManga;
 import org.json.JSONObject;
 import org.springframework.stereotype.Service;
@@ -13,7 +11,7 @@ import java.util.List;
 @Service
 public class MangaClient {
 
-    public Manga getMangaByIdClient(long id) {
+    public Manga getMangaByIdClient(Long id) {
         //Busca um manga pelo ID
 
     /*
@@ -44,7 +42,7 @@ public class MangaClient {
         return CreateManga.createMangasWithJson(mangaJson);
     }
 
-    public List<Manga> getTrendingMangas() {
+    public List<Manga> getTrendingMangasClient() {
         //Retorna os mangas mais famosos
 
         String mangaStr = new RestTemplate()
