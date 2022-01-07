@@ -12,7 +12,8 @@ import java.util.List;
 @Service
 @AllArgsConstructor
 public class MangaService {
-    MangaClient mangaClient;
+
+    private final MangaClient mangaClient;
 
     public Manga getAnimeByIdService(Long id){
         return mangaClient.getMangaByIdClient(id);

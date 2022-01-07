@@ -3,7 +3,6 @@ package Firedev.DesafioKitsu.Controller;
 import Firedev.DesafioKitsu.Domain.Manga;
 import Firedev.DesafioKitsu.Service.MangaService;
 import lombok.AllArgsConstructor;
-import lombok.extern.log4j.Log4j2;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,7 +13,7 @@ import java.util.List;
 @RequestMapping(path = "/manga")
 public class MangaController {
 
-    MangaService mangaService;
+    private final MangaService mangaService;
 
     @GetMapping(path = "/{id}")
     public Manga getMangaById(@PathVariable Long id){

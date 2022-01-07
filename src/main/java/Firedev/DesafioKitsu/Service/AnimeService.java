@@ -12,7 +12,7 @@ import java.util.List;
 @AllArgsConstructor
 public class AnimeService {
 
-    AnimeClient animeClient;
+    private final AnimeClient animeClient;
 
     public Anime getAnimeByIdService(Long id){
         return animeClient.getAnimeByIdClient(id);

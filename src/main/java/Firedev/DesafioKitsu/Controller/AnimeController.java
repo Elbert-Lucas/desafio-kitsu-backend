@@ -12,7 +12,7 @@ import java.util.List;
 @RequestMapping(path = "/anime")
 public class AnimeController {
 
-    AnimeService animeService;
+    private final AnimeService animeService;
 
     @GetMapping(path = "/{id}")
     public Anime getAnimeById(@PathVariable Long id){
@@ -27,4 +27,5 @@ public class AnimeController {
     public List<Anime> getTrendingAnimes(){
         return animeService.getTrendingAnimesService();
     }
+
 }

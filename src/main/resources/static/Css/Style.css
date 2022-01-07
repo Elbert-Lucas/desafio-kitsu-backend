@@ -1,0 +1,108 @@
+body{
+    padding: 0;
+    margin: 0;
+
+}
+.search-box{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 480px;
+    height: 60px;
+    transform: translate(-50%,-50%);
+    background: #353b48;
+    border-radius: 20px;
+    padding: 10px;
+    padding: 0 6px;
+}
+.search-btn{
+    color: #00a8ff;
+    float: right;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #353b48;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 26px;
+    transition: 0.4s;
+    line-height: 40px;
+    width:0px;
+    width: 400px;
+    padding: 10px;
+
+}
+
+
+
+#radio_id{
+        position: absolute;
+        top: 20%;
+        left: 45%;
+        font-weight: bolder;
+    }
+
+
+select {
+   appearance:none;
+   outline:0;
+   box-shadow:none;
+   border:0!important;
+   background: #e86f6f;
+   background-image: none;
+   flex: 1;
+   padding: 0 .5em;
+   color:#fff;
+   cursor:pointer;
+   font-size: 1em;
+   font-family: 'Open Sans', sans-serif;
+}
+
+.select {
+   position: absolute;
+   top: 27.5%;
+   left: 27%;
+   margin: 0;
+   display: flex;
+   width: 8em;
+   height: 3em;
+   line-height: 3;
+   background: #941515;
+   overflow: hidden;
+   border-radius: .25em;
+}
+.select::after {
+   content: '\25BC';
+   position: absolute;
+   top: 0;
+   right: 0;
+   padding: 0 1em;
+   background: #bd2a2a;
+   cursor:pointer;
+   pointer-events:none;
+   transition:.25s all ease;
+}
+
+h5{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+}
+
+@media (max-width:  1640px){
+   
+   .select {
+   position: absolute;
+   top: 37.5%;
+   left: 38%;
+}
+}

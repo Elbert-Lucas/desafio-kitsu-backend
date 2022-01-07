@@ -1,12 +1,66 @@
 <!DOCTYPE html>
-<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http:/thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="widht=widht-device, initial-scale=1.0">
+    <meta name="viewport" content="width=width-device, initial-scale=1.0">
+    <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet"  href="Css/Style.css">
+
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
     <title>Desafio Kitsu</title>
     <meta name="author" content="Elbert lucas">
 </head>
+
 <body>
+
+<section>
+
+
+    <form method="POST" action="/">
+
+        <!--radio anime/manga  -->
+        <div id="radio_id">
+            <input type="radio" id="anime_radio" value="anime" name="type" checked>
+            <label for="anime_radio">Anime</label>
+
+            <input type="radio" id="manga_radio" value="manga" name="type">
+            <label for="manga_radio">Mangá</label>
+
+        </div>
+
+        <!-- Escolher atributo de pesquisa  -->
+
+        <div class="select">
+            <select name="format" id="format">
+                <option value="id">ID</option>
+                <option value="slug">Nome</option>
+                <option value="text">Texto</option>
+                <option value="fb2">Ano</option>
+            </select>
+        </div>
+
+        <!-- search box -->
+
+        <div class="search-box">
+            <input name="slug" class="search-txt" type="text" placeholder="Faça a sua pesquisa...">
+            <a type="submit" class="search-btn" href="#">
+                <i class="fas fa-search"></i>
+            </a>
+        </div>
+
+    </form>
+
+    <br>
+    <br>
+    <h5>
+        Existem outras atributos para que você possa procurar seu anime/manga desejado. Dê uma olhada
+        nos atributos disponibilizados pela Kitsu Api, após isso, volte para cá e adicione à url:
+        <br> .../anime?attribute=AtributoDesejado&value=ValorDoAtributo
+    </h5>
+</section>
+
 
 </body>
 
