@@ -1,16 +1,14 @@
 package Firedev.DesafioKitsu.Domain;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.experimental.SuperBuilder;
 import lombok.extern.log4j.Log4j2;
 
 
 @Log4j2
 @Data
-@AllArgsConstructor
-@JsonAutoDetect
 @Builder
 public class Anime {
 
@@ -26,6 +24,6 @@ public class Anime {
     private String slug;
     private String type;
     private String description;
-    private String episodeCount; // o n° de episodios é uma string para não gerar exceçoes com valor null
     private String poster;
+    private String episodeCount; // o n° de episodios é uma string para não gerar exceçoes com valor null
 }
