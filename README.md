@@ -3,7 +3,7 @@
 # Tecnologias utilizadas:
 
 
-### Java 11
+### Java 17
 ### Spring Frameword
 ### Kitsu Api
 ### Html e Css
