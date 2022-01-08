@@ -47,3 +47,6 @@
 ### Popular Searches Database
 ![populardatabase](https://user-images.githubusercontent.com/63523828/148633561-b7f6a57f-1280-4a21-a085-c665d532d95b.PNG)
 
+# Front-End para pesquisas de anime e mangá
+![FRONTEND](https://user-images.githubusercontent.com/63523828/148660778-2a8003ab-e0c8-415b-b34f-a4b4c1ca55ae.PNG)
+
