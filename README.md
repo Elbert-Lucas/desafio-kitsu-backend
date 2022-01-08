@@ -25,6 +25,18 @@
 ### Get By Name - success
 ![getBySlugSucess](https://user-images.githubusercontent.com/63523828/148614537-617778d2-5117-48b0-9bbe-34482cfb14f2.PNG)
 
+### Get Episode and Chapter By ID - success!
+[get chapter by id](https://user-images.githubusercontent.com/63523828/148661068-dc2abf31-41e1-48aa-be25-ccdd02f46a6d.PNG)
+![get episode by id](https://user-images.githubusercontent.com/63523828/148661070-1e5aba5d-d786-4974-b461-0e469a5a45ef.PNG)
+
+### Get Episode and Chapter By ID anime and ID manga - success!
+![get episode by anime id](https://user-images.githubusercontent.com/63523828/148661077-3192334f-2174-495e-aaea-490aa49df4a1.PNG)
+![get chapter by manga id](https://user-images.githubusercontent.com/63523828/148661078-79f9e50d-516e-4ffb-8d59-6d2260fab48e.PNG)
+
+### Get Episode and Chapter By Anime anime and Anime manga - success!
+![get chapter by manga name](https://user-images.githubusercontent.com/63523828/148661089-64836ac8-7d74-443e-b94c-1ab63c6fcfb3.PNG)
+![get episode by anime name](https://user-images.githubusercontent.com/63523828/148661091-45c5660a-6018-435b-895f-16ee087b9e8a.PNG)
+
 
 ### Get By Text - success
 ![getByTextSucess](https://user-images.githubusercontent.com/63523828/148614582-6f21da41-af45-4c74-9ae6-246ecb95672e.PNG)
