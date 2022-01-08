@@ -41,3 +41,9 @@
 ### Get By Attributes - Fail
 ![mangaAttrsFail](https://user-images.githubusercontent.com/63523828/148614798-ab38ccbd-79a6-41f9-a4cd-e06f06f6fbfe.PNG)
 
+### Get Popular Searches
+![popularSearch](https://user-images.githubusercontent.com/63523828/148633431-4ffcdbcd-3ab4-434f-86f3-c118c5843669.PNG)
+
+### Popular Searches Database
+![populardatabase](https://user-images.githubusercontent.com/63523828/148633561-b7f6a57f-1280-4a21-a085-c665d532d95b.PNG)
+
