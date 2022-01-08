@@ -32,7 +32,13 @@ public class MangaService {
         if (attribute.isEmpty() || value.isEmpty()){
             throw new BadRequestException("Alguns dos valores passados são invalidos");
         }
-        return mangaClient.getMangaByFilterClient(attribute, value);
+        List<Manga> mangaList = mangaClient.getMangaByFilterClient(attribute, value);
+
+        //Adicionar a pesquisa que estao na lista no banco de dados:
+        mangaList.
+                forEach(manga -> popularSearchService.SaveOrIncrement(CreateSearch.createSearch(manga)));
+
+        return mangaList;
     }
 
     public List<Manga> getTrendingAnimesService(){

@@ -30,8 +30,13 @@ public class AnimeService {
         if (attribute.isEmpty() || value.isEmpty()){
             throw new BadRequestException("Alguns dos valores passados são invalidos");
         }
+        List<Anime> animeList = animeClient.getAnimeByFilterClient(attribute, value);
 
-        return animeClient.getAnimeByFilterClient(attribute, value);
+        //Adicionar a pesquisa que estao na lista no banco de dados:
+        animeList.
+                forEach(anime -> popularSearchService.SaveOrIncrement(CreateSearch.createSearch(anime)));
+
+        return animeList;
     }
     public List<Anime> getTrendingAnimesService(){
        return animeClient.getTrendingAnimesClient();
