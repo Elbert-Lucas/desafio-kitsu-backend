@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=width-device, initial-scale=1.0">
     <link rel="stylesheet"  href="Css/Style.css">
 
-
+    <script src="Js/script.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
     <title>Desafio Kitsu</title>
@@ -21,23 +21,24 @@
 
     <!--radio anime/manga  -->
         <div id="radio_id">
-            <input type="radio" id="anime_radio" value="anime" name="type" checked>
+            <input type="radio" id="anime_radio" value="anime" name="type" checked onclick="checkRadio()">
             <label for="anime_radio">Anime</label>
-            <input type="radio" id="manga_radio" value="manga" name="type">
+
+            <input type="radio" id="manga_radio" value="manga" name="type" onclick="checkRadio()">
             <label for="manga_radio">Mangá</label>
+
         </div>
 
         <!-- Escolher atributo de pesquisa  -->
 
-        <div class="select">
-            <select name="attribute" >
-                <option value="id">ID</option>
-                <option value="slug">Nome</option>
-                <option value="text">Texto</option>
-                <option value="fb2">Ano</option>
-            </select>
-        </div>
-
+       <div class="select">
+           <select name="attribute" >
+               <option value="id">ID</option>
+               <option value="slug">Nome</option>
+               <option value="text">Texto</option>
+               <option value="year">Ano</option>
+           </select>
+       </div>
         <!-- search box -->
 
         <div class="search-box">
@@ -49,6 +50,20 @@
 
    </form>
 
+    <span id="rankings">
+
+    <a href="/anime/trending">
+    <input type="button" value="Animes mais famosos">
+    </a>
+
+    <a href="/manga/trending">
+        <input type="button" value="Mangás mais famosos">
+    </a>
+
+    <a href="/popular-searches">
+        <input type="button" value="Pesquisas mais famosos">
+    </a>
+    </span>
 
     <br>
     <br>
