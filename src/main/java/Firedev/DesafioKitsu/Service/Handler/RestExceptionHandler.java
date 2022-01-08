@@ -1,4 +1,4 @@
-package Firedev.DesafioKitsu.Handler;
+package Firedev.DesafioKitsu.Service.Handler;
 
 import Firedev.DesafioKitsu.Util.Exceptions.ExceptionDetails;
 import Firedev.DesafioKitsu.Util.Exceptions.BadRequestException;

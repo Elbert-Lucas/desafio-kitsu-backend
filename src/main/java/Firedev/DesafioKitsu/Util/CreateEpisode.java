@@ -2,6 +2,7 @@ package Firedev.DesafioKitsu.Util;
 
 import Firedev.DesafioKitsu.Domain.Episode;
 import lombok.extern.log4j.Log4j2;
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.web.client.RestTemplate;
 
@@ -10,7 +11,13 @@ public class CreateEpisode {
 
     public static Episode createEpisodeWithJson(JSONObject episodeObject){
 
-        JSONObject data = episodeObject.getJSONArray("data").getJSONObject(0);
+        JSONObject data;
+        //Quando se filtra o campo de episodios, o retorno é um array de episodios
+        if (episodeObject.get("data") instanceof JSONArray)
+            data =  episodeObject.getJSONArray("data").getJSONObject(0);
+        else
+            data =  episodeObject.getJSONObject("data");
+
         JSONObject attributes = data.getJSONObject("attributes");
         JSONObject relationships = data.getJSONObject("relationships");
 

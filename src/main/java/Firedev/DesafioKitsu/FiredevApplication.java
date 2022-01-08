@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 @Log4j2
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class } )
+@SpringBootApplication()
 public class FiredevApplication {
 
 

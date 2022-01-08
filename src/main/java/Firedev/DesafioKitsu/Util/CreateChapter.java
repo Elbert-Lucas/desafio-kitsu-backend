@@ -1,6 +1,7 @@
 package Firedev.DesafioKitsu.Util;
 
 import Firedev.DesafioKitsu.Domain.Chapter;
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.web.client.RestTemplate;
 
@@ -8,7 +9,13 @@ public class CreateChapter{
 
         public static Chapter createEpisodeWithJson(JSONObject chapterObject){
 
-            JSONObject data = chapterObject.getJSONArray("data").getJSONObject(0);
+            JSONObject data;
+            //Quando se filtra o campo de capitulos, o retorno é um array de episodios
+            if (chapterObject.get("data") instanceof JSONArray)
+                data =  chapterObject.getJSONArray("data").getJSONObject(0);
+            else
+                data =  chapterObject.getJSONObject("data");
+
             JSONObject attributes = data.getJSONObject("attributes");
             JSONObject relationships = data.getJSONObject("relationships");
 
